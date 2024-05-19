@@ -1,38 +1,174 @@
 .App {
-  text-align: center;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .light {
+  background-color: white;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.App .dark {
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dashboard{
+  position: relative;
+  padding: 25px;
+  top: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+
+.col {
+  float: left;
+  min-height: 200px;
+  padding-bottom: 40px;
+}
+
+.col-4{
+  width: 25%;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 #000;
+  padding: 10px;
+  margin: 10px;
+  height: 100%;
+}
+
+.card .title{
+  border-bottom: 2px solid;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform:uppercase
+}
+
+.card .body{
+  color: #2e405b;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1500px) {
+  .col-4{
+    width: 33%;
+    margin: 0 auto;
   }
-  to {
-    transform: rotate(360deg);
+  .card .title{
+    font-size: 1.5rem;
   }
+  
+  .card .body{
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .col-4{
+    width: 50%;
+    margin: 0 auto;
+  }
+  .card .title{
+    font-size: 1.5rem;
+  }
+  
+  .card .body{
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .col-4{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .card .title{
+    font-size: 1.6rem;
+  }
+  
+  .card .body{
+    font-size: 1.5rem;
+  }
+}
+
+.nav{
+  padding: 10px;
+  height: 60px;
+  border-bottom: 1px solid #ccc;
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+}
+
+.logo{
+  float: left;
+}
+
+.logo img{
+  padding: 10px;
+  width: 180px;
+}
+
+.settings{
+  float: right;
+  padding: 15px;
+}
+
+a.menuOption{
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+a.menuOption:hover{
+  color: #3562a5;
+}
+
+/*light theme*/
+
+.light .settings {
+  color: black;
+}
+
+.light .dashboard {
+  color: black;
+  background-color: #fff;
+}
+
+.title .light{
+  color: #153059;
+}
+
+.body .light{
+  color: #ccc;
+}
+
+/*dark theme*/
+.dark  .settings{
+  color: white;
+}
+
+.dark .dashboard {
+  color: white;
+  background-color: #000;
+}
+
+.dark .dark{
+  color: #fff;
+}
+
+.body .dark{
+  color: #ccc;
 }
